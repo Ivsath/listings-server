@@ -11,10 +11,6 @@ const app = express();
 
 app.disable('x-powered-by');
 
-if (config.isDev) {
-  app.use(morgan('dev'));
-}
-
 server.applyMiddleware({ app, path: '/api' });
 
 export const start = (): void => {
