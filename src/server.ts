@@ -1,6 +1,5 @@
 import { ApolloServer } from 'apollo-server-express';
 import express from 'express';
-import morgan from 'morgan';
 
 import config from './config';
 import { schema } from './graphql';
