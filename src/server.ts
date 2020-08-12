@@ -3,7 +3,6 @@ import express from 'express';
 
 import config from './config';
 import { resolvers, typeDefs } from './graphql';
-// import connect from './utils/db';
 
 const server = new ApolloServer({ typeDefs, resolvers });
 const app = express();
@@ -14,7 +13,6 @@ server.applyMiddleware({ app, path: '/api' });
 
 export const start = (): void => {
   try {
-    // await connect();
     app.listen(config.port, () => {
       console.log(
         `Server running in ${config.env} mode on http://localhost:${config.port}`,
