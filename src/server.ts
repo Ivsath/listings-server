@@ -2,10 +2,10 @@ import { ApolloServer } from 'apollo-server-express';
 import express from 'express';
 
 import config from './config';
-import { schema } from './graphql';
+import { resolvers, typeDefs } from './graphql';
 // import connect from './utils/db';
 
-const server = new ApolloServer({ schema });
+const server = new ApolloServer({ typeDefs, resolvers });
 const app = express();
 
 app.disable('x-powered-by');
