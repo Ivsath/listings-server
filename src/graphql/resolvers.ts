@@ -1,7 +1,7 @@
 import { IResolvers } from 'apollo-server-express';
 import { remove } from 'lodash';
 
-import { Listing, listings } from '../_data/listings';
+import { Listing } from '../lib/types';
 
 export const resolvers: IResolvers = {
   Query: {
