@@ -19,5 +19,6 @@ module.exports = {
   rules: {
     'simple-import-sort/sort': 'error',
     '@typescript-eslint/explicit-function-return-type': 'off',
+    '@typescript-eslint/no-var-requires': 'off',
   },
 };
