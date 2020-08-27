@@ -1,6 +1,4 @@
-import dotenv from 'dotenv';
-
-dotenv.config();
+require('dotenv').config();
 
 import { connectDatabase } from '../src/database';
 import { listings } from './listings';

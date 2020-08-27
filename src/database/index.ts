@@ -1,10 +1,11 @@
 import { MongoClient } from 'mongodb';
 
-import config from '../config';
 import { Database } from '../lib/types';
 
+const url = `mongodb+srv://${process.env.DB_USER}:${process.env.DB_USER_PASSWORD}@${process.env.DB_CLUSTER}.mongodb.net?retryWrites=true&w=majority`;
+
 export const connectDatabase = async (): Promise<Database> => {
-  const client = await MongoClient.connect(config.dbUrl, {
+  const client = await MongoClient.connect(url, {
     useNewUrlParser: true,
     useUnifiedTopology: true,
   });
