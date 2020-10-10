@@ -1,6 +1,6 @@
 import { BaseEntity, Column, Entity, PrimaryColumn } from 'typeorm';
 
-@Entity()
+@Entity('listings')
 export class Listing extends BaseEntity {
   @PrimaryColumn('text')
   id: string;
