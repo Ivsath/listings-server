@@ -1,10 +1,10 @@
-import { ObjectId } from 'mongodb';
+import crypto from 'crypto';
 
 import { Listing } from '../src/lib/types';
 
 export const listings: Listing[] = [
   {
-    _id: new ObjectId(),
+    id: crypto.randomBytes(16).toString('hex'),
     title: 'Clean and fully furnished apartment. 5 min away from CN Tower',
     image:
       'https://res.cloudinary.com/tiny-house/image/upload/v1560641352/mock/Toronto/toronto-listing-1_exv0tf.jpg',
@@ -16,7 +16,7 @@ export const listings: Listing[] = [
     rating: 5,
   },
   {
-    _id: new ObjectId(),
+    id: crypto.randomBytes(16).toString('hex'),
     title: 'Luxurious home with private pool',
     image:
       'https://res.cloudinary.com/tiny-house/image/upload/v1560645376/mock/Los%20Angeles/los-angeles-listing-1_aikhx7.jpg',
@@ -28,7 +28,7 @@ export const listings: Listing[] = [
     rating: 4,
   },
   {
-    _id: new ObjectId(),
+    id: crypto.randomBytes(16).toString('hex'),
     title: 'Single bedroom located in the heart of downtown San Fransisco',
     image:
       'https://res.cloudinary.com/tiny-house/image/upload/v1560646219/mock/San%20Fransisco/san-fransisco-listing-1_qzntl4.jpg',

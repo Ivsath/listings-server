@@ -10,7 +10,7 @@ const seed = async () => {
     const db = await connectDatabase();
 
     for (const listing of listings) {
-      await db.listings.insertOne(listing);
+      await db.listings.create(listing).save();
     }
 
     console.log('[seed] : success');
