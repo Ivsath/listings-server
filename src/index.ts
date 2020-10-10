@@ -1,4 +1,5 @@
 require('dotenv').config();
+import 'reflect-metadata';
 
 import { ApolloServer } from 'apollo-server-express';
 import express, { Application } from 'express';
